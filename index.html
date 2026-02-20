@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bhuvanap | Resume Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #0f172a;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    /* Scroll Animation Background */
+    #animation-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.12; /* Watermark transparency */
+      pointer-events: none;
+    }
+
+    /* Overlay for readability */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(
+        to bottom,
+        rgba(15, 23, 42, 0.85),
+        rgba(15, 23, 42, 0.95)
+      );
+      z-index: -1;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px 10%;
+      text-align: left;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #38bdf8;
+      margin-bottom: 20px;
+      border-left: 5px solid #38bdf8;
+      padding-left: 10px;
+    }
+
+    h3 {
+      color: #7dd3fc;
+      margin-top: 15px;
+    }
+
+    p {
+      line-height: 1.7;
+      font-size: 1.05rem;
+      color: #e2e8f0;
+    }
+
+    section {
+      padding: 80px 10%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(30, 41, 59, 0.7);
+      padding: 25px;
+      border-radius: 15px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      margin-bottom: 25px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      color: #e2e8f0;
+    }
+
+    .contact {
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: rgba(2, 6, 23, 0.8);
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Scrollable Frame Animation Background -->
+  <img id="animation-bg" src="frames/ezgif-frame-001.jpg" alt="Animation Background"/>
+  <div class="overlay"></div>
+
+  <!-- Hero Section -->
+  <header>
+    <h1>BHUVANAP</h1>
+    <p class="contact">
+      📞 +91 9360129760 <br/>
+      ✉️ bhuvi2052006@gmail.com <br/>
+      📍 505/1, Vettai Perumal Kovil Street, Rajapalayam
+    </p>
+
+    <div class="card" style="margin-top:30px;">
+      <h2>Career Objective</h2>
+      <p>
+        Seeking an internship in Electronics and Communication Engineering where I can apply my knowledge of embedded systems, networks, and programming. Passionate about contributing innovative solutions while continuously enhancing my technical expertise and interpersonal skills.
+      </p>
+    </div>
+  </header>
+
+  <!-- About / Technical Profile -->
+  <section>
+    <h2>Technical Profile</h2>
+    <div class="card">
+      <p>
+        Basic knowledge in Industrial Automation using PLC for controlling and monitoring industrial processes. Skilled in PLC programming fundamentals and troubleshooting to improve system efficiency and reliability.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section>
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Programming & Tools</h3>
+        <ul>
+          <li>Python</li>
+          <li>C</li>
+          <li>Excel</li>
+          <li>PowerPoint</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Technical Skills</h3>
+        <ul>
+          <li>Embedded System</li>
+          <li>VLSI</li>
+          <li>Design Thinking</li>
+          <li>PLC Programming</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Languages</h3>
+        <ul>
+          <li>Tamil</li>
+          <li>English</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Hobbies</h3>
+        <ul>
+          <li>Playing Chess</li>
+          <li>Cricket</li>
+          <li>Listening to Music</li>
+          <li>Watching Movies</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section>
+    <h2>Education</h2>
+    <div class="card">
+      <h3>B.E Electronics and Communication Engineering (2023 – 2027)</h3>
+      <p>Government College of Engineering, Tirunelveli</p>
+      <p>CGPA: 8.74*</p>
+    </div>
+
+    <div class="card">
+      <h3>HSC (2021 – 2023)</h3>
+      <p>P.A.C.R Ammani Ammal Girls Higher Secondary School, Rajapalayam</p>
+      <p>Percentage: 94%</p>
+    </div>
+
+    <div class="card">
+      <h3>SSLC (2020 – 2021)</h3>
+      <p>P.A.C.R Ammani Ammal Girls Higher Secondary School, Rajapalayam</p>
+    </div>
+  </section>
+
+  <!-- Internship -->
+  <section>
+    <h2>Internship</h2>
+    <div class="card">
+      <h3>Industrial Automation Using PLC</h3>
+      <p>
+        Gained hands-on exposure to PLC-based control systems for industrial process monitoring and automation. Developed understanding of control logic, troubleshooting, and process optimization techniques.
+      </p>
+    </div>
+  </section>
+
+  <!-- Certification -->
+  <section>
+    <h2>Certification</h2>
+    <div class="card">
+      <h3>Foundation Course on IR4.0 Technologies</h3>
+      <p>
+        Completed a foundational course covering key technologies driving the Fourth Industrial Revolution (Industry 4.0), including IoT, Artificial Intelligence, Web Designing, and Automation.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section>
+    <h2>Mini Projects</h2>
+    <div class="card">
+      <h3>Driver Anti-Sleep Device</h3>
+      <p>
+        A safety system that detects driver drowsiness using sensors by monitoring eye movement and head position. Provides alerts to prevent accidents caused by sleepiness.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Flood Detection (Techathon 2025)</h3>
+      <p>
+        Award position in a college-level technical competition at Government College of Engineering, Tirunelveli. Presented an early flood detection concept demonstrating analytical thinking and collaborative project execution.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 Bhuvanap | Resume Portfolio
+  </footer>
+
+  <script>
+    const frameCount = 240;
+    const img = document.getElementById("animation-bg");
+
+    function getFrameIndex() {
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const scrollFraction = scrollTop / docHeight;
+      return Math.min(
+        frameCount - 1,
+        Math.floor(scrollFraction * frameCount)
+      );
+    }
+
+    function updateFrame() {
+      const frameIndex = getFrameIndex();
+      const frameNumber = String(frameIndex + 1).padStart(3, "0");
+      img.src = `frames/ezgif-frame-${frameNumber}.jpg`;
+    }
+
+    window.addEventListener("scroll", () => {
+      requestAnimationFrame(updateFrame);
+    });
+  </script>
+
+</body>
+</html>
