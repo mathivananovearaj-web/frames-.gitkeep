@@ -1,99 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Bhuvanap – Resume Portfolio</title>
 
 <style>
     body {
         margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background: #f5f5f5;
-        color: #222;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #ffffff;
+        color: #1d1d1d;
         overflow-x: hidden;
     }
 
-    /* Scroll animation background container */
+    /* Background animation layer */
     #scroll-animation-bg {
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: -1;
-        opacity: 0.18;           /* watermark effect */
-        pointer-events: none;    /* avoid interaction issues */
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        opacity: 0.28;              /* softer transparency */
+        filter: blur(2px);           /* blur behind content */
+        transition: opacity 0.3s linear;
     }
 
-    /* Resume container */
+    /* Frosted glass overlay */
+    #frosted-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        backdrop-filter: blur(14px) brightness(1.15);
+        background: rgba(255, 255, 255, 0.45); /* soft transparent white */
+        pointer-events: none;
+    }
+
     .container {
         max-width: 900px;
-        padding: 40px 25px;
         margin: auto;
+        padding: 50px 30px 80px;
     }
 
     h1 {
-        font-size: 40px;
-        margin-bottom: 8px;
-        color: #333;
+        font-size: 42px;
+        margin-bottom: 10px;
+        color: #1a1a1a;
     }
 
     h2 {
-        margin-top: 40px;
-        color: #444;
-        border-left: 4px solid #0077ff;
-        padding-left: 10px;
-    }
-
-    .section {
-        margin-bottom: 25px;
+        margin-top: 45px;
+        font-size: 24px;
+        border-left: 5px solid #007bff;
+        padding-left: 12px;
+        color: #222;
     }
 
     .info-box {
         font-size: 17px;
-        line-height: 1.6;
+        line-height: 1.65;
+        color: #333;
     }
 
     ul {
-        margin-top: 8px;
         line-height: 1.7;
     }
 
-    .contact {
-        margin-bottom: 20px;
-    }
-
-    .bold { font-weight: bold; }
+    .bold { font-weight: 600; }
 </style>
 </head>
 
 <body>
 
+<!-- Background Animation -->
 <div id="scroll-animation-bg"></div>
+
+<!-- Frosted Glass Layer -->
+<div id="frosted-overlay"></div>
+
 
 <div class="container">
 
     <h1>Bhuvanap</h1>
 
-    <div class="contact info-box">
+    <div class="info-box">
         <div><span class="bold">Phone:</span> +91 9360129760</div>
         <div><span class="bold">Email:</span> bhuvi2052006@gmail.com</div>
         <div><span class="bold">Address:</span> 505/1, Vettai Perumal Kovil Street, Rajapalayam</div>
     </div>
 
     <h2>Career Objective</h2>
-    <div class="section info-box">
+    <div class="info-box">
         Seeking an internship in Electronics and Communication Engineering where I can apply my
         knowledge of embedded systems, networks, and programming. Passionate about contributing
         innovative solutions while continuously enhancing my technical expertise and interpersonal skills.
     </div>
 
     <h2>Skills</h2>
-    <div class="section info-box">
+    <div class="info-box">
         <ul>
             <li>Python</li>
             <li>C</li>
@@ -102,85 +109,77 @@
             <li>Embedded Systems</li>
             <li>VLSI</li>
             <li>Design Thinking</li>
-            <li>Basic Knowledge in Industrial Automation using PLC</li>
+            <li>Industrial Automation using PLC</li>
             <li>PLC Programming & Troubleshooting</li>
         </ul>
         <div><span class="bold">Languages:</span> Tamil, English</div>
-        <div><span class="bold">Hobbies:</span> Playing Chess, Cricket, Listening to Music, Watching Movies</div>
+        <div><span class="bold">Hobbies:</span> Chess, Cricket, Music, Movies</div>
     </div>
 
     <h2>Internship</h2>
-    <div class="section info-box">
+    <div class="info-box">
         <span class="bold">Industrial Automation using PLC</span><br>
-        Hands-on learning in PLC programming fundamentals, process control, monitoring and
-        troubleshooting to improve system efficiency and reliability.
+        Hands-on learning in PLC programming fundamentals, process control, monitoring and troubleshooting to improve efficiency and reliability.
     </div>
 
     <h2>Education</h2>
-    <div class="section info-box">
+    <div class="info-box">
         <ul>
             <li>
                 <span class="bold">SSLC (2020–2021)</span><br>
                 P.A.C.R Ammani Ammal Girls Higher Secondary School, Rajapalayam — 94%
-            </li>
-            <br>
+            </li><br>
             <li>
                 <span class="bold">HSC (2021–2023)</span><br>
                 P.A.C.R Ammani Ammal Girls Higher Secondary School, Rajapalayam
-            </li>
-            <br>
+            </li><br>
             <li>
-                <span class="bold">B.E Electronics and Communication Engineering (2023–2027)</span><br>
-                Government College of Engineering, Tirunelveli — CGPA: 8.74*
+                <span class="bold">B.E ECE (2023–2027)</span><br>
+                Government College of Engineering, Tirunelveli — CGPA 8.74*
             </li>
         </ul>
     </div>
 
     <h2>Certification</h2>
-    <div class="section info-box">
-        Foundation Course on IR4.0 Technologies — covered IoT, AI, Automation, Web Designing and
-        key Industry 4.0 domains.
+    <div class="info-box">
+        Foundation Course on IR4.0 Technologies — covered IoT, AI, Automation, Web Designing
+        and emerging Industry 4.0 technologies.
     </div>
 
     <h2>Mini Project</h2>
-    <div class="section info-box">
+    <div class="info-box">
         <span class="bold">Driver Anti-Sleep Device</span><br>
-        A safety system that detects driver drowsiness using sensors. It monitors eye movement or head
-        position and triggers an alert when sleepiness is detected to prevent accidents.
+        A sensor-based system detecting drowsiness via eye/head movement and issuing alerts to prevent accidents.
     </div>
 
     <h2>Achievements</h2>
-    <div class="section info-box">
-        Awarded a position in Techathon 2025, a college-level technical competition, for presenting
-        Early Flood Detection at Government College of Engineering, Tirunelveli. Demonstrated strong
-        analytical ability and teamwork.
+    <div class="info-box">
+        Awarded in Techathon 2025 (Early Flood Detection) conducted by Government College of
+        Engineering, Tirunelveli. Demonstrated strong analytical and teamwork skills.
     </div>
 
 </div>
 
-<script>
-/*
- SCROLL-BASED BACKGROUND FRAME ANIMATION
- Using frames: ezgif-frame-001.jpg → ezgif-frame-240.jpg
- Folder: /frames/
-*/
 
+<script>
+/* Scroll-linked background animation using 240 images */
 const totalFrames = 240;
-const framePath = index => `frames/ezgif-frame-${String(index).padStart(3, '0')}.jpg`;
+const framePath = index =>
+  `frames/ezgif-frame-${String(index).padStart(3, "0")}.jpg`;
 
 const bg = document.getElementById("scroll-animation-bg");
 
 function updateFrame() {
     const scrollTop = window.scrollY;
     const docHeight = document.body.scrollHeight - window.innerHeight;
-    const scrollPercent = scrollTop / docHeight;
+    const progress = scrollTop / docHeight;
 
-    const frameIndex = Math.min(
+    const frame = Math.min(
         totalFrames,
-        Math.max(1, Math.floor(scrollPercent * totalFrames))
+        Math.max(1, Math.floor(progress * totalFrames))
     );
 
-    bg.style.backgroundImage = `url(${framePath(frameIndex)})`;
+    bg.style.backgroundImage = `url(${framePath(frame)})`;
 }
 
 window.addEventListener("scroll", updateFrame);
