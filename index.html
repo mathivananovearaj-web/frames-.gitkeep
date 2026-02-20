@@ -1,305 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bhuvanap | Resume Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhuvanap – Resume Portfolio</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      scroll-behavior: smooth;
-    }
-
+<style>
     body {
-      background: #0f172a;
-      color: #ffffff;
-      overflow-x: hidden;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f5f5f5;
+        color: #222;
+        overflow-x: hidden;
     }
 
-    /* Scroll Animation Background */
-    #animation-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-      z-index: -1;
-      opacity: 0.12; /* Watermark transparency */
-      pointer-events: none;
+    /* Scroll animation background container */
+    #scroll-animation-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        opacity: 0.18;           /* watermark effect */
+        pointer-events: none;    /* avoid interaction issues */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
-    /* Overlay for readability */
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: linear-gradient(
-        to bottom,
-        rgba(15, 23, 42, 0.85),
-        rgba(15, 23, 42, 0.95)
-      );
-      z-index: -1;
-    }
-
-    header {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 60px 10%;
-      text-align: left;
+    /* Resume container */
+    .container {
+        max-width: 900px;
+        padding: 40px 25px;
+        margin: auto;
     }
 
     h1 {
-      font-size: 3rem;
-      color: #38bdf8;
-      margin-bottom: 10px;
+        font-size: 40px;
+        margin-bottom: 8px;
+        color: #333;
     }
 
     h2 {
-      font-size: 2rem;
-      color: #38bdf8;
-      margin-bottom: 20px;
-      border-left: 5px solid #38bdf8;
-      padding-left: 10px;
+        margin-top: 40px;
+        color: #444;
+        border-left: 4px solid #0077ff;
+        padding-left: 10px;
     }
 
-    h3 {
-      color: #7dd3fc;
-      margin-top: 15px;
+    .section {
+        margin-bottom: 25px;
     }
 
-    p {
-      line-height: 1.7;
-      font-size: 1.05rem;
-      color: #e2e8f0;
-    }
-
-    section {
-      padding: 80px 10%;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .card {
-      background: rgba(30, 41, 59, 0.7);
-      padding: 25px;
-      border-radius: 15px;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-      margin-bottom: 25px;
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+    .info-box {
+        font-size: 17px;
+        line-height: 1.6;
     }
 
     ul {
-      margin-top: 10px;
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 8px;
-      color: #e2e8f0;
+        margin-top: 8px;
+        line-height: 1.7;
     }
 
     .contact {
-      font-size: 1.1rem;
-      margin-top: 10px;
+        margin-bottom: 20px;
     }
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: rgba(2, 6, 23, 0.8);
-      margin-top: 50px;
-      font-size: 0.9rem;
-      color: #94a3b8;
-    }
-  </style>
+    .bold { font-weight: bold; }
+</style>
 </head>
+
 <body>
 
-  <!-- Scrollable Frame Animation Background -->
-  <img id="animation-bg" src="frames/ezgif-frame-001.jpg" alt="Animation Background"/>
-  <div class="overlay"></div>
+<div id="scroll-animation-bg"></div>
 
-  <!-- Hero Section -->
-  <header>
-    <h1>BHUVANAP</h1>
-    <p class="contact">
-      📞 +91 9360129760 <br/>
-      ✉️ bhuvi2052006@gmail.com <br/>
-      📍 505/1, Vettai Perumal Kovil Street, Rajapalayam
-    </p>
+<div class="container">
 
-    <div class="card" style="margin-top:30px;">
-      <h2>Career Objective</h2>
-      <p>
-        Seeking an internship in Electronics and Communication Engineering where I can apply my knowledge of embedded systems, networks, and programming. Passionate about contributing innovative solutions while continuously enhancing my technical expertise and interpersonal skills.
-      </p>
+    <h1>Bhuvanap</h1>
+
+    <div class="contact info-box">
+        <div><span class="bold">Phone:</span> +91 9360129760</div>
+        <div><span class="bold">Email:</span> bhuvi2052006@gmail.com</div>
+        <div><span class="bold">Address:</span> 505/1, Vettai Perumal Kovil Street, Rajapalayam</div>
     </div>
-  </header>
 
-  <!-- About / Technical Profile -->
-  <section>
-    <h2>Technical Profile</h2>
-    <div class="card">
-      <p>
-        Basic knowledge in Industrial Automation using PLC for controlling and monitoring industrial processes. Skilled in PLC programming fundamentals and troubleshooting to improve system efficiency and reliability.
-      </p>
+    <h2>Career Objective</h2>
+    <div class="section info-box">
+        Seeking an internship in Electronics and Communication Engineering where I can apply my
+        knowledge of embedded systems, networks, and programming. Passionate about contributing
+        innovative solutions while continuously enhancing my technical expertise and interpersonal skills.
     </div>
-  </section>
 
-  <!-- Skills Section -->
-  <section>
     <h2>Skills</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Programming & Tools</h3>
+    <div class="section info-box">
         <ul>
-          <li>Python</li>
-          <li>C</li>
-          <li>Excel</li>
-          <li>PowerPoint</li>
+            <li>Python</li>
+            <li>C</li>
+            <li>Excel</li>
+            <li>PowerPoint</li>
+            <li>Embedded Systems</li>
+            <li>VLSI</li>
+            <li>Design Thinking</li>
+            <li>Basic Knowledge in Industrial Automation using PLC</li>
+            <li>PLC Programming & Troubleshooting</li>
         </ul>
-      </div>
-
-      <div class="card">
-        <h3>Technical Skills</h3>
-        <ul>
-          <li>Embedded System</li>
-          <li>VLSI</li>
-          <li>Design Thinking</li>
-          <li>PLC Programming</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Languages</h3>
-        <ul>
-          <li>Tamil</li>
-          <li>English</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Hobbies</h3>
-        <ul>
-          <li>Playing Chess</li>
-          <li>Cricket</li>
-          <li>Listening to Music</li>
-          <li>Watching Movies</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Education -->
-  <section>
-    <h2>Education</h2>
-    <div class="card">
-      <h3>B.E Electronics and Communication Engineering (2023 – 2027)</h3>
-      <p>Government College of Engineering, Tirunelveli</p>
-      <p>CGPA: 8.74*</p>
+        <div><span class="bold">Languages:</span> Tamil, English</div>
+        <div><span class="bold">Hobbies:</span> Playing Chess, Cricket, Listening to Music, Watching Movies</div>
     </div>
 
-    <div class="card">
-      <h3>HSC (2021 – 2023)</h3>
-      <p>P.A.C.R Ammani Ammal Girls Higher Secondary School, Rajapalayam</p>
-      <p>Percentage: 94%</p>
-    </div>
-
-    <div class="card">
-      <h3>SSLC (2020 – 2021)</h3>
-      <p>P.A.C.R Ammani Ammal Girls Higher Secondary School, Rajapalayam</p>
-    </div>
-  </section>
-
-  <!-- Internship -->
-  <section>
     <h2>Internship</h2>
-    <div class="card">
-      <h3>Industrial Automation Using PLC</h3>
-      <p>
-        Gained hands-on exposure to PLC-based control systems for industrial process monitoring and automation. Developed understanding of control logic, troubleshooting, and process optimization techniques.
-      </p>
+    <div class="section info-box">
+        <span class="bold">Industrial Automation using PLC</span><br>
+        Hands-on learning in PLC programming fundamentals, process control, monitoring and
+        troubleshooting to improve system efficiency and reliability.
     </div>
-  </section>
 
-  <!-- Certification -->
-  <section>
+    <h2>Education</h2>
+    <div class="section info-box">
+        <ul>
+            <li>
+                <span class="bold">SSLC (2020–2021)</span><br>
+                P.A.C.R Ammani Ammal Girls Higher Secondary School, Rajapalayam — 94%
+            </li>
+            <br>
+            <li>
+                <span class="bold">HSC (2021–2023)</span><br>
+                P.A.C.R Ammani Ammal Girls Higher Secondary School, Rajapalayam
+            </li>
+            <br>
+            <li>
+                <span class="bold">B.E Electronics and Communication Engineering (2023–2027)</span><br>
+                Government College of Engineering, Tirunelveli — CGPA: 8.74*
+            </li>
+        </ul>
+    </div>
+
     <h2>Certification</h2>
-    <div class="card">
-      <h3>Foundation Course on IR4.0 Technologies</h3>
-      <p>
-        Completed a foundational course covering key technologies driving the Fourth Industrial Revolution (Industry 4.0), including IoT, Artificial Intelligence, Web Designing, and Automation.
-      </p>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section>
-    <h2>Mini Projects</h2>
-    <div class="card">
-      <h3>Driver Anti-Sleep Device</h3>
-      <p>
-        A safety system that detects driver drowsiness using sensors by monitoring eye movement and head position. Provides alerts to prevent accidents caused by sleepiness.
-      </p>
+    <div class="section info-box">
+        Foundation Course on IR4.0 Technologies — covered IoT, AI, Automation, Web Designing and
+        key Industry 4.0 domains.
     </div>
 
-    <div class="card">
-      <h3>Flood Detection (Techathon 2025)</h3>
-      <p>
-        Award position in a college-level technical competition at Government College of Engineering, Tirunelveli. Presented an early flood detection concept demonstrating analytical thinking and collaborative project execution.
-      </p>
+    <h2>Mini Project</h2>
+    <div class="section info-box">
+        <span class="bold">Driver Anti-Sleep Device</span><br>
+        A safety system that detects driver drowsiness using sensors. It monitors eye movement or head
+        position and triggers an alert when sleepiness is detected to prevent accidents.
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    © 2026 Bhuvanap | Resume Portfolio
-  </footer>
+    <h2>Achievements</h2>
+    <div class="section info-box">
+        Awarded a position in Techathon 2025, a college-level technical competition, for presenting
+        Early Flood Detection at Government College of Engineering, Tirunelveli. Demonstrated strong
+        analytical ability and teamwork.
+    </div>
 
-  <script>
-    const frameCount = 240;
-    const img = document.getElementById("animation-bg");
+</div>
 
-    function getFrameIndex() {
-      const scrollTop = window.scrollY;
-      const docHeight = document.body.scrollHeight - window.innerHeight;
-      const scrollFraction = scrollTop / docHeight;
-      return Math.min(
-        frameCount - 1,
-        Math.floor(scrollFraction * frameCount)
-      );
-    }
+<script>
+/*
+ SCROLL-BASED BACKGROUND FRAME ANIMATION
+ Using frames: ezgif-frame-001.jpg → ezgif-frame-240.jpg
+ Folder: /frames/
+*/
 
-    function updateFrame() {
-      const frameIndex = getFrameIndex();
-      const frameNumber = String(frameIndex + 1).padStart(3, "0");
-      img.src = `frames/ezgif-frame-${frameNumber}.jpg`;
-    }
+const totalFrames = 240;
+const framePath = index => `frames/ezgif-frame-${String(index).padStart(3, '0')}.jpg`;
 
-    window.addEventListener("scroll", () => {
-      requestAnimationFrame(updateFrame);
-    });
-  </script>
+const bg = document.getElementById("scroll-animation-bg");
+
+function updateFrame() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const scrollPercent = scrollTop / docHeight;
+
+    const frameIndex = Math.min(
+        totalFrames,
+        Math.max(1, Math.floor(scrollPercent * totalFrames))
+    );
+
+    bg.style.backgroundImage = `url(${framePath(frameIndex)})`;
+}
+
+window.addEventListener("scroll", updateFrame);
+window.addEventListener("load", updateFrame);
+</script>
 
 </body>
 </html>
